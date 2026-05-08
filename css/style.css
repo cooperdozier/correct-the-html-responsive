@@ -164,21 +164,29 @@ hr {
 }
 
 @media (min-width: 800px) {
+	.container {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		grid-template-areas: "main-article main-article main-article main-sidebar main-sidebar"
+	 	}
 	.header_pub-info {
+		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
+		align-content: center;
 	}
 
 	.main-article {
-		width: 60%;
+		/* max-width: 60%; */
+		grid-area: "main-article";
 		border-radius: 0.6rem;
-		margin: 0;
+		margin: 1em;
 	}
 
 	.main-sidebar {
-		width: 40%;
+		grid-area: "main-sidebar";
+		/* max-width: 40%; */
 		border-radius: 0.6rem;
-		margin: 0;
+		margin: 1em;
 	}
 }
